@@ -1,0 +1,332 @@
+/*CSS GRID STYLING*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr auto auto auto auto auto 1fr;
+    grid-column-gap: 75px;
+    /*grid-gap: 100px;*/
+    grid-template-areas: "Logo . . Menu""Main-Image Main-Image Main-Image Main-Image""Info-text Info-text Info-text Info-text""Project-1 Project-1 Project-1 Project-1""Project-2 Project-2 Project-3 Project-3""Project-4 Project-4 Project-4 Project-4""Footer-1 Footer-1 Footer-2 Footer-2";
+}
+
+
+
+.Logo {
+    grid-area: Logo;
+}
+
+.Menu {
+    grid-area: Menu;
+}
+
+.Main-Image {
+    grid-area: Main-Image;
+    position: relative;
+}
+
+.Info-text {
+    grid-area: Info-text;
+    width: 100%;
+
+}
+
+.Project-1 {
+    grid-area: Project-1;
+    position: relative; /*Important Line of Code for my overlay effects!*/
+}
+
+.Project-2 {
+    grid-area: Project-2;
+    margin-top: 75px;
+    position: relative; /*Important Line of Code for my overlay effects!*/
+}
+
+.Project-3 {
+    grid-area: Project-3;
+    margin-top: 75px;
+    position: relative; /*Important Line of Code for my overlay effects!*/
+}
+
+.Project-4 {
+    grid-area: Project-4;
+    width: 100%;
+    margin-top: 75px;
+    position: relative; /*Important Line of Code for my overlay effects!*/
+}
+
+.Footer-1 {
+    grid-area: Footer-1;
+    color: white;
+}
+
+.Footer-2 {
+    grid-area: Footer-2;
+}
+
+/*END OF CSS GRID INFO*/
+
+
+
+/*H1 Styling - Not excludes this styling to selected class*/
+h1:not(.ViewAllWork) {
+    color: black;
+    font-family: 'Playfair Display';
+    display: inline-block;
+    font-size: 74px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-left: 75px
+}
+
+.ViewAllWork {
+    color: black;
+    font-family: 'Playfair Display';
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: underline overline;
+}
+
+
+
+
+p {
+    color: black;
+    font-family: 'Source Sans Pro';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 75px;
+}
+
+
+
+/*a:not(.EMAILLINK) {
+    color: #999;
+    border-bottom: 2px solid #666;
+    display: inline-block;
+    font-family: 'Source Sans Pro';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+}*/
+
+.overlay a{
+    color: #000000;
+    border-bottom: 2px solid #000000;
+    display: inline-block;
+    font-family: 'Source Sans Pro';
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    filter: none;
+}
+
+
+.EMAILLINK {
+    color: black;
+    font-family: 'Source Sans Pro';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+
+}
+
+
+a:hover:not(.EMAILLINK) {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.EMAILLINK:hover {
+    color: black;
+    text-decoration: line-through;
+    text-decoration-color: white;
+}
+
+
+/*Redacted Styling*/
+.redacted {
+  color: #000;
+   background-color: #000;
+}
+
+
+
+/*website project image on the front page*/
+.oldWebsiteImage {
+    width: 100%;
+}
+
+.FronterRedesign {
+    width: 100%;
+    border: 100px;
+}
+
+.ProfilePic {
+    margin-top: 75px;
+}
+
+
+.OZ {
+    width: 100%;
+    border: 100px;
+}
+
+/*Bike KHB image stying on the front page*/
+.BikeKBH {
+    width: 100%;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Navigation Styling*/
+#navbar {
+    background-color: black;
+    /* Black background color */
+    position: fixed;
+    /* Make it stick/fixed */
+    top: -50px;
+    /* Hide the navbar 50 px outside of the top view */
+    width: 100%;
+    /* Full width */
+    transition: top 0.3s;
+    /* Transition effect when sliding down (and up) */
+    z-index: 1;
+}
+
+/* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*Adds Hover effect of menu*/
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*END OF NAVIGATION CODE!!!*/
+
+
+
+
+
+
+
+.Project-1:hover .overlay {
+    opacity: 1;
+}
+
+.Project-2:hover .overlay {
+    opacity: 1;
+}
+
+.Project-3:hover .overlay {
+    opacity: 1;
+}
+
+.Project-4:hover .overlay {
+    opacity: 1;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+    background-color: #008CBA;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    filter: none;
+}
+
+
+/*mouse effect code BELOW*/
+.middle{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.mouse{
+    width: 50px;
+    height:90px;
+    border: 4px solid #ffffff;
+    border-radius: 60px;
+    opacity: 0.5;
+}
+
+.mouse::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 30px;
+    background: #ffffff;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: mouse 2s infinite;
+}
+
+@keyframes mouse{
+    from{
+        opacity: 1;
+        top 30px;
+    }
+    to{
+        opacity: 0;
+        top: 75px
+    }
+}
+/*MOUSE EFFCT CODING ENDS*/
