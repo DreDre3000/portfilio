@@ -1,0 +1,308 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.7fr 0.7fr 0.7fr 0.7fr auto auto auto;
+    grid-template-areas: "Hero-IMG Hero-IMG Hero-IMG Hero-IMG""Task-Description Task-Description Task-Description Task-Description""Role-Title MainTextRoles MainTextRoles MainTextRoles""MainTextIdeation MainTextIdeation MainTextIdeation Ideation""PrototypeTitle ManiTextPrototype ManiTextPrototype ManiTextPrototype""FinalSiteText FinalSiteText FinalSiteText FinalSiteText""IMGGallery IMGGallery IMGGallery IMGGallery""Footer-1 Footer-1 Footer-2 Footer-2";
+}
+
+p {
+    color: black;
+    font-family: 'Source Sans Pro';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-left: 75px;
+}
+
+a:not(#navbar){
+   color: black;
+    font-family: 'Source Sans Pro';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px; 
+    font-weight: bold;
+}
+
+.Hero-IMG {
+    grid-area: Hero-IMG;
+}
+
+.Task-Description {
+    grid-area: Task-Description;
+}
+
+.Role-Title {
+    grid-area: Role-Title;
+}
+
+.Ideation {
+    grid-area: Ideation;
+}
+
+.Footer-1 {
+    grid-area: Footer-1;
+    background-color: black;
+}
+
+/*Changes Font to white in the footer*/
+.Footer-1 p{
+    color: white;
+}
+
+.Footer-2 {
+    grid-area: Footer-2;
+    background-color: black;
+}
+
+.Footer-2 p{
+    color: white;
+}
+
+.MainTextRoles {
+    grid-area: MainTextRoles;
+}
+
+.FinalSiteText {
+    grid-area: FinalSiteText;
+}
+
+.IMGGallery {
+    grid-area: IMGGallery;
+    width: 100%;
+}
+
+.PrototypeTitle {
+    grid-area: PrototypeTitle;
+}
+
+.ManiTextPrototype {
+    grid-area: ManiTextPrototype;
+}
+
+.MainTextIdeation {
+    grid-area: MainTextIdeation;
+}
+
+
+
+#titlevid {
+    width: 100%;
+    height: 100%;
+    filter: opacity(30%);
+}
+
+.overlay-desc:not(.theme03) {
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: 'Playfair Display';
+    font-size: 74px;
+    line-height: inherit;
+    display: inline-block;
+    font-size: 74px;
+    font-weight: 900;
+    margin-left: 5vw;
+}
+
+.theme03{
+    font-size: 50px;
+    display:flex;
+    margin-left: 5vw;
+    font-weight: 900;
+}
+
+
+h3:not(.ViewAllWork):not(.SubHeading) {
+    color: black;
+    font-family: 'Playfair Display';
+    display: inline-block;
+    font-size: 74px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-left: 75px;
+}
+
+.SubHeading{
+    text-align: center;
+    color: black;
+    font-family: 'Playfair Display';
+    font-size: 74px;
+    font-weight: 900;
+    line-height: 60px;
+    margin-left: 75px;
+}
+
+.ViewAllWork {
+    color: black;
+    font-family: 'Playfair Display';
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: underline overline;
+}
+
+#LinkToSite{
+     color: black;
+    font-family: 'Playfair Display';
+    text-align: center;
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: underline overline;
+    display: block;
+    margin: 75px;
+}
+
+.redacted {
+  color: #000;
+   background-color: #000;
+}
+
+
+/*Navigation Styling*/
+#navbar {
+    background-color: black;
+    /* Black background color */
+    position: fixed;
+    /* Make it stick/fixed */
+    top: -80px;
+    /* Hide the navbar 50 px outside of the top view */
+    width: 100%;
+    /* Full width */
+    transition: top 0.3s;
+    /* Transition effect when sliding down (and up) */
+     z-index: 1;
+}
+
+/* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+     z-index: 1;
+    font-size: 18px;
+}
+
+/*Adds Hover effect of menu*/
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+     z-index: 1;
+}
+
+/*END OF NAVIGATION CODE!!!*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float:left;
+  width: 25%;
+  padding: 0px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer;
+    width: 20vw;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: black;
+  font-size: 65px;
+  cursor: pointer;
+}
+
+
+.EMAILLINK {
+    color: white;
+    font-family: 'Source Sans Pro';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    
+}
+
+.EMAILLINK:hover {
+    color: white;
+    text-decoration: line-through;
+}
+
+
+a:hover {
+    color: black;
+    text-decoration: line-through;
+}
+
+#LinkToSite:hover {
+    color: black;
+    text-decoration: line-through;
+}
